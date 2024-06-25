@@ -26,7 +26,7 @@ const MiniItem = ({ item, today }) => {
 					minimumFractionDigits: 2,
 					maximumFractionDigits: 2
 				})}{' '}
-				<StyledCurrency>EUR</StyledCurrency>
+				<StyledCurrency>PejeCoins</StyledCurrency>
 			</StyledPrice>
 			<StyledBids>
 				{item.bids} {Number(item.bids) === 1 ? 'puja' : 'pujas'}
