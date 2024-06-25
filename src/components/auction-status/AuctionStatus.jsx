@@ -49,7 +49,7 @@ const AuctionStatus = ({ highestBid, highestBidder, endDate, seller }) => {
 				backgroundColor={COLORS.successBackground}
 				borderColor={COLORS.successBackground}
 			>
-				{STATUS.highestBidder} {highestBid} EUR.
+				{STATUS.highestBidder} {highestBid} PejeCoins.
 			</StyledGridItem2Cols>
 		);
 	}
