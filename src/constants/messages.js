@@ -37,8 +37,8 @@ export const STATUS = {
 export const MESSAGES = {
 	bid: 'puja',
 	bids: 'pujas',
-	currency: 'EUR',
-	currencySymbol: '€',
+	currency: 'PejeCoins',
+	currencySymbol: '$',
 	deleteWarning:
 		'¿Seguro que deseas borrar este anuncio y las imágenes vinculadas?',
 	irreversible: 'Esta acción no se puede deshacer.',
