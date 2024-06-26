@@ -9,13 +9,13 @@ import { getStorage } from 'firebase/storage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyDYCqzIN2VIkxt0XE3JCHud5aBH1YtDHP8",
-	authDomain: "subasta-fe15e.firebaseapp.com",
-	projectId: "subasta-fe15e",
-	storageBucket: "subasta-fe15e.appspot.com",
-	messagingSenderId: "1052780584040",
-	appId: "1:1052780584040:web:3c140f6c94ed0f74d66fdd"
-};
+	apiKey: "AIzaSyDOgtdKWtFRybJc9Wq0QY1tTUIVeMpJNDk",
+	authDomain: "subasta-8e8df.firebaseapp.com",
+	projectId: "subasta-8e8df",
+	storageBucket: "subasta-8e8df.appspot.com",
+	messagingSenderId: "988328122412",
+	appId: "1:988328122412:web:63de95d1291ec1f5075989"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
