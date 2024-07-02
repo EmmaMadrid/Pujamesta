@@ -59,6 +59,7 @@ const Profile = () => {
 				<MyFavs />
 			</div>
 		</StyledGrid>
+		
 	);
 };
 

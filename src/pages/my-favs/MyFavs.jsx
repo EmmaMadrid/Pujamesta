@@ -6,6 +6,7 @@ import MiniItem from '../../components/mini-item/MiniItem';
 import { StyledContainer } from './styles';
 import { MESSAGES, TITLES } from '../../constants/messages';
 import Loader from '../../components/loader/Loader';
+import BarChart from '../../Bar';
 
 const MyFavs = () => {
 	const { loggedUser } = useContext(AuthContext);
@@ -31,6 +32,9 @@ const MyFavs = () => {
 						<MiniItem key={item.id} item={item} today={today} />
 					))}
 				</StyledContainer>
+			</div>
+			<div className="graphs">
+				<BarChart />
 			</div>
 		</>
 	);
