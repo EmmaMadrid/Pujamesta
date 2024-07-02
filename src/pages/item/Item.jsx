@@ -33,6 +33,20 @@ import { MESSAGES } from '../../constants/messages';
 import Fav from '../../components/fav/Fav';
 import { handleFav } from '../../utils/toggle-fav';
 
+const PaymentButton = ({ item }) => {
+  const navigate = useNavigate();
+
+  const handlePayment = () => {
+    navigate('/payment', { state: { item } });
+  };
+
+  return (
+    <button onClick={handlePayment}>
+      Pagar
+    </button>
+  );
+};
+
 const Item = () => {
 	const { itemId } = useParams();
 	const [item, setItem] = useState(null);
@@ -60,6 +74,8 @@ const Item = () => {
 	const [active, setActive] = useState(true);
 
 	if (!item) return <Loader />;
+
+	const isAuctionWon = !active && item.highestBidder === loggedUser?.email;
 
 	return (
 		<>
@@ -199,6 +215,8 @@ const Item = () => {
 								seller={item.sellerEmail}
 							/>
 						)}
+
+						{isAuctionWon && <PaymentButton item={item} />}
 					</StyledDetailsGrid>
 				</div>
 			</StyledGrid>

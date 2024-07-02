@@ -35,8 +35,8 @@ export const STATUS = {
 };
 
 export const MESSAGES = {
-	bid: 'puja',
-	bids: 'pujas',
+	bid: 'apuesta',
+	bids: 'apuestas',
 	currency: 'PejeCoin',
 	currencySymbol: '$',
 	deleteWarning:

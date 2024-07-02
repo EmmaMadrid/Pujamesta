@@ -17,6 +17,7 @@ import SellerItems from '../pages/seller-items/SellerItems';
 import RedirectLoggedUser from './RedirectLoggedUser';
 import { MESSAGES } from '../constants/messages';
 import ResetPassword from '../pages/reset-password/ResetPassword';
+import Payment from '../pages/payment/payment';
 
 const Router = () => {
 	return (
@@ -26,6 +27,7 @@ const Router = () => {
 				<Route path='/itm/:itemId' element={<Item />} />
 				<Route path='/itm/:itemId/edit' element={<EditItem />} />
 				<Route path='/usr/:userEmail' element={<SellerItems />} />
+				<Route path="/payment" element={<Payment />} />
 				<Route
 					path='/profile'
 					element={

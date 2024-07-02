@@ -10,6 +10,9 @@
 	},
 	"dependencies": {
 		"@phosphor-icons/react": "^2.0.9",
+		"@stripe/react-stripe-js": "^2.7.3",
+		"@stripe/stripe-js": "^4.1.0",
+		"axios": "^1.7.2",
 		"chart.js": "^4.4.3",
 		"firebase": "^9.21.0",
 		"framer-motion": "^10.12.16",
