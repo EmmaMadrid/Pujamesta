@@ -9,11 +9,14 @@
 		"lint": "eslint . --ext .js,.jsx --fix"
 	},
 	"dependencies": {
+		"@paypal/react-paypal-js": "^8.5.0",
 		"@phosphor-icons/react": "^2.0.9",
 		"@stripe/react-stripe-js": "^2.7.3",
 		"@stripe/stripe-js": "^4.1.0",
 		"axios": "^1.7.2",
 		"chart.js": "^4.4.3",
+		"cors": "^2.8.5",
+		"express": "^4.19.2",
 		"firebase": "^9.21.0",
 		"framer-motion": "^10.12.16",
 		"react": "18.2.0",
@@ -21,6 +24,7 @@
 		"react-dom": "18.2.0",
 		"react-hook-form": "^7.43.9",
 		"react-router-dom": "^6.11.1",
+		"stripe": "^16.1.0",
 		"styled-components": "^5.3.9",
 		"uuid": "9.0.0"
 	},
@@ -36,5 +40,10 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"prettier": "2.8.5",
 		"vite": "^4.3.9"
-	}
+	},
+	"description": "![image](./src/assets/images/1.png)\r ![image](./src/assets/images/2.png)\r ![image](./src/assets/images/3.png)\r ![image](./src/assets/images/4.png)\r ![image](./src/assets/images/5.png)\r ![image](./src/assets/images/6.png)\r ![image](./src/assets/images/7.png)",
+	"main": ".eslintrc.js",
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
 }

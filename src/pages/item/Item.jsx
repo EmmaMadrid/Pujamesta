@@ -32,20 +32,8 @@ import Loader from '../../components/loader/Loader';
 import { MESSAGES } from '../../constants/messages';
 import Fav from '../../components/fav/Fav';
 import { handleFav } from '../../utils/toggle-fav';
-
-const PaymentButton = ({ item }) => {
-  const navigate = useNavigate();
-
-  const handlePayment = () => {
-    navigate('/payment', { state: { item } });
-  };
-
-  return (
-    <button onClick={handlePayment}>
-      Pagar
-    </button>
-  );
-};
+import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
+import { PAYPAL_CLIENT_ID } from '../../config/paypal.config';
 
 const Item = () => {
 	const { itemId } = useParams();
@@ -74,8 +62,6 @@ const Item = () => {
 	const [active, setActive] = useState(true);
 
 	if (!item) return <Loader />;
-
-	const isAuctionWon = !active && item.highestBidder === loggedUser?.email;
 
 	return (
 		<>
@@ -216,7 +202,31 @@ const Item = () => {
 							/>
 						)}
 
-						{isAuctionWon && <PaymentButton item={item} />}
+						{/* Botón de pago de PayPal */}
+						{!active && loggedUser?.email === item.highestBidder && (
+							<PayPalScriptProvider options={{ "client-id": PAYPAL_CLIENT_ID }}>
+								<div>Ya puedes pagar tu articulo.</div>
+								<PayPalButtons
+									createOrder={(data, actions) => {
+										return actions.order.create({
+											purchase_units: [{
+												amount: {
+													value: item.currentPrice.toFixed(2),
+													currency_code: "USD"
+												},
+												description: item.description
+											}]
+										});
+									}}
+									onApprove={(data, actions) => {
+										return actions.order.capture().then(details => {
+											alert('Pago realizado con éxito por ' + details.payer.name.given_name);
+											// Aquí puedes agregar lógica para actualizar el estado del pedido en tu base de datos.
+										});
+									}}
+								/>
+							</PayPalScriptProvider>
+						)}
 					</StyledDetailsGrid>
 				</div>
 			</StyledGrid>

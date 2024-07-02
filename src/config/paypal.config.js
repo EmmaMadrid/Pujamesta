@@ -1,0 +1,2 @@
+export const PAYPAL_CLIENT_ID = 'Aa70_rnOgAojdpLtjZWBQiQvTeinYiz25vcgQDFkGnA0pkh_jmaJnKG3efH08W0WD1XTuBQpJeNEcnSL';
+
